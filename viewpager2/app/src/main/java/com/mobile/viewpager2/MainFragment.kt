@@ -24,6 +24,9 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Setting RecyclerViewImpl of ViewPager2's clipChildren to false
+        // Uncomment this block
+//        (vp.getChildAt(0) as ViewGroup).clipChildren = false
         vp.adapter = PagerAdapter(this)
     }
 }
